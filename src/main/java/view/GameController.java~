@@ -124,7 +124,7 @@ public class GameController
 	}
 	
 	
-	public int mivan;
+	
 	public int osszpiros = 0;
 	public int osszkek = 0;
 	public int lepes = 0;
