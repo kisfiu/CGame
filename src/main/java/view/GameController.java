@@ -12,12 +12,16 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import model.Merge;
+import model.ReadXMLFile;
 import model.XmlProba;
 
 import java.io.IOException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
+
+import org.xml.sax.SAXException;
 
 import controller.MainApp;
 
@@ -129,10 +133,10 @@ public class GameController
 	public int osszkek = 0;
 	public int lepes = 0;
 	@FXML
-	public void lepeslehetoseg(ActionEvent e) throws InterruptedException
+	public void lepeslehetoseg(ActionEvent e) throws InterruptedException, TransformerException, ParserConfigurationException, IOException, SAXException
 	{
 		Node node=(Node) e.getSource();
-		
+		ReadXMLFile.main(null);
 		if(lepes<1)
 		{
 			Color color = (Color)((Region) node).getBackground().getFills().get(0).getFill();
@@ -348,7 +352,7 @@ public class GameController
 	    		
 	    		if (osszkek == 10)
 	    		{lepeslabel.setText("The blue player won!");}
-	    		if (lepeslabel.getText().equals("The blue player won!")  || lepeslabel.getText().equals("The pink player won!"))
+	    		if (lepeslabel.getText().equals("The blue player won!")  || lepeslabel.getText().equals("No more possible steps! The pink player won!") || lepeslabel.getText().equals("No more possible steps! DRAW!") || lepeslabel.getText().equals("The pink player won!") || lepeslabel.getText().equals("No more possible steps! The blue player won!"))
 	    		{
 	    			int x;
 					int y;
@@ -370,7 +374,10 @@ public class GameController
 	    		String player2pontok = Integer.toString(osszpiros);
 	            XmlProba.setpontok1(player1pontok);
 	            XmlProba.setpontok2(player2pontok);
-    			try {
+	            ReadXMLFile.setpontok1(player1pontok);
+	            ReadXMLFile.setpontok2(player2pontok);
+	            ReadXMLFile.main(null);
+	            try {
 					XmlProba.main(null);
 				} catch (TransformerException e1) {
 					// TODO Auto-generated catch block
@@ -380,7 +387,10 @@ public class GameController
 					e1.printStackTrace();
 				}
 	    		
+	            Merge.main(null);
+	            
 	    		}
+	    		
 
 	    		node.setDisable(false);
 		    	szinezzunk(node);

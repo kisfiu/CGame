@@ -12,6 +12,8 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import javafx.scene.text.Text;
 
@@ -44,7 +46,7 @@ public class XmlProba {
         doc.appendChild(players);
         
         
-        Element player = doc.createElement("player");
+        Element player = doc.createElement("player");  
         player.setAttribute("name", asd1);          
         players.appendChild(player);
 

@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.ReadXMLFile;
 import model.XmlProba;
 
 import java.io.IOException;
@@ -36,6 +37,10 @@ public class StartGameController
         gamecontroller.ssetName(playertwotext.getText());
         XmlProba.settName1(playeronetext.getText());
         XmlProba.settName2(playertwotext.getText());
+        ReadXMLFile.settName1(playeronetext.getText());
+        ReadXMLFile.settName2(playertwotext.getText());
+        
+        
         try {
 			XmlProba.main(null);
 		} catch (TransformerException e) {

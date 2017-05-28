@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<players>
+	<player name="sanyi">
+		<matchesplayed>23</matchesplayed>
+		<matcheswon>19</matcheswon>
+		<matchesdraw>2</matchesdraw>
+		<points>201</points>
+	</player>
+	<player name="gabi">
+		<matchesplayed>13</matchesplayed>
+		<matcheswon>1</matcheswon>
+		<matchesdraw>0</matchesdraw>
+		<points>5</points>
+	</player>
+	<player name="tilda">
+		<matchesplayed>10</matchesplayed>
+		<matcheswon>1</matcheswon>
+		<matchesdraw>2</matchesdraw>
+		<points>11</points>
+	</player>
+<player name="fika">
+    <matchesplayed>8</matchesplayed>
+    <matcheswon>4</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>2</points>
+  </player>
+<player name="lovacska">
+    <matchesplayed>4</matchesplayed>
+    <matcheswon>4</matcheswon>
+    <matchesdraw>4</matchesdraw>
+    <points>1</points>
+  </player>
+<player name="majom">
+    <matchesplayed>8</matchesplayed>
+    <matcheswon>4</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>2</points>
+  </player>
+<player name="almacsutka">
+    <matchesplayed>4</matchesplayed>
+    <matcheswon>4</matcheswon>
+    <matchesdraw>4</matchesdraw>
+    <points>1</points>
+  </player>
+<player name="jonapot">
+    <matchesplayed>8</matchesplayed>
+    <matcheswon>4</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>2</points>
+  </player>
+<player name="sajtosretes">
+    <matchesplayed>4</matchesplayed>
+    <matcheswon>4</matcheswon>
+    <matchesdraw>4</matchesdraw>
+    <points>1</points>
+  </player>
+<player name="cucli">
+    <matchesplayed>4</matchesplayed>
+    <matcheswon>4</matcheswon>
+    <matchesdraw>4</matchesdraw>
+    <points>1</points>
+  </player>
+<player name="teázó nagymama vagyok">
+    <matchesplayed>8</matchesplayed>
+    <matcheswon>4</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>2</points>
+  </player>
+<player name="én meg a jövőd elkorcsítva">
+    <matchesplayed>4</matchesplayed>
+    <matcheswon>4</matcheswon>
+    <matchesdraw>4</matchesdraw>
+    <points>1</points>
+  </player>
+<player name="kolompér">
+    <matchesplayed>8</matchesplayed>
+    <matcheswon>4</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>3</points>
+  </player>
+</players>
