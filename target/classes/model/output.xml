@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<players>
+  <player name="Sándor">
+    <matchesplayed>8</matchesplayed>
+    <matcheswon>4</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>32</points>
+  </player>
+  <player name="adamkó">
+    <matchesplayed>4</matchesplayed>
+    <matcheswon>4</matcheswon>
+    <matchesdraw>4</matchesdraw>
+    <points>32</points>
+  </player>
+</players>
