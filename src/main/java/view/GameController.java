@@ -363,8 +363,8 @@ public class GameController
 							Node nnnnoode = (Node) node;
 							nnnnoode =(Button) sceene.lookup(visszabutton);
 							nnnnoode.setDisable(true);
-						    }	
-						}
+					    }	
+					}
 	    		
 		   		String player1pontok = Integer.toString(osszkek); 
 	    		String player2pontok = Integer.toString(osszpiros);
