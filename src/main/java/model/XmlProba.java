@@ -24,11 +24,13 @@ public class XmlProba {
     /**
      * @param args the command line arguments
      */
-//	static String asd;
-//	public static void settName(String playeronetext) 
-//	{
-//	asd = playeronetext;
-//	}
+	static String asd;static String asd1;static String asd2;static String pontos1;static String pontos2;
+	
+	public static void settName1(String playeronetext)     {asd1 = playeronetext;}
+	public static void settName2(String playertwotext)     {asd2 = playertwotext;}
+	public static void setpontok1(String player1pontok)     {pontos1 = player1pontok;}
+	public static void setpontok2(String player2pontok)     {pontos2 = player2pontok;}
+
 	
 	public static void main(String[] args) throws TransformerException, ParserConfigurationException 
     {
@@ -43,8 +45,7 @@ public class XmlProba {
         
         
         Element player = doc.createElement("player");
-        player.setAttribute("name", "Sándor");
-//        player.setAttribute("name", asd);          
+        player.setAttribute("name", asd1);          
         players.appendChild(player);
 
         
@@ -63,12 +64,12 @@ public class XmlProba {
         Element points = doc.createElement("points");
         int pontok1 = (Integer.parseInt(matcheswon.getTextContent()) * 5 + Integer.parseInt(matcheswon.getTextContent()) * 3);
         String pontokk1 = Integer.toString(pontok1);
-        points.setTextContent(pontokk1);
+        points.setTextContent(pontos1);
         player.appendChild(points);
         
         
         Element player2 = doc.createElement("player");
-        player2.setAttribute("name", "adamkó");
+        player2.setAttribute("name", asd2);
         players.appendChild(player2);
 
         Element matchesplayed2 = doc.createElement("matchesplayed");
@@ -86,8 +87,16 @@ public class XmlProba {
         Element points2 = doc.createElement("points");
         int pontok2 = (Integer.parseInt(matcheswon2.getTextContent()) * 5 + Integer.parseInt(matcheswon2.getTextContent()) * 3);
         String pontokk2 = Integer.toString(pontok2);
-        points2.setTextContent(pontokk2);
+        points2.setTextContent(pontos2);
         player2.appendChild(points2);
+
+        
+        
+        System.out.println(asd1);
+        System.out.println(asd2);
+        System.out.println(pontos1);
+        System.out.println(pontos2);
+
         
 
         TransformerFactory tFactory = TransformerFactory.newInstance();

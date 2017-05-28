@@ -12,8 +12,12 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import model.XmlProba;
 
 import java.io.IOException;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 
 import controller.MainApp;
 
@@ -361,6 +365,21 @@ public class GameController
 							nnnnoode.setDisable(true);
 						    }	
 						}
+	    		
+		   		String player1pontok = Integer.toString(osszkek); 
+	    		String player2pontok = Integer.toString(osszpiros);
+	            XmlProba.setpontok1(player1pontok);
+	            XmlProba.setpontok2(player2pontok);
+    			try {
+					XmlProba.main(null);
+				} catch (TransformerException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (ParserConfigurationException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+	    		
 	    		}
 
 	    		node.setDisable(false);

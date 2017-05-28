@@ -16,6 +16,9 @@ import model.XmlProba;
 
 import java.io.IOException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+
 import controller.MainApp;
 
 public class StartGameController
@@ -31,7 +34,17 @@ public class StartGameController
         GameController gamecontroller = loader.getController();
         gamecontroller.setName(playeronetext.getText());
         gamecontroller.ssetName(playertwotext.getText());
-//        XmlProba.settName(playeronetext.getText());
+        XmlProba.settName1(playeronetext.getText());
+        XmlProba.settName2(playertwotext.getText());
+        try {
+			XmlProba.main(null);
+		} catch (TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 //        XmlProba.ssettName(playertwotext.getText());
 
         
