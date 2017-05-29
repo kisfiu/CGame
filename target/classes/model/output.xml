@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <players>
-  <player name="lol">
+  <player name="0">
     <matchesplayed>8</matchesplayed>
-    <matcheswon>4</matcheswon>
+    <matcheswon>0</matcheswon>
     <matchesdraw>0</matchesdraw>
-    <points/>
+    <points>0</points>
   </player>
-  <player name="csáá">
+  <player name="0">
     <matchesplayed>4</matchesplayed>
-    <matcheswon>4</matcheswon>
-    <matchesdraw>4</matchesdraw>
-    <points/>
+    <matcheswon>0</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>0</points>
   </player>
 </players>

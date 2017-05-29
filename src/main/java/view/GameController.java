@@ -128,7 +128,10 @@ public class GameController
 	}
 	
 	
-	
+	public int nyertes1 = 0;
+	public int nyertes2 = 0;
+	public int draw1 = 0;
+	public int draw2 = 0;
 	public int osszpiros = 0;
 	public int osszkek = 0;
 	public int lepes = 0;
@@ -327,17 +330,20 @@ public class GameController
 	    	 
 	    		if (zold == 0 && piros == 0 && kek == 0)
 	    		{ 
-	    			if(piros > kek)
+	    			if(piros < kek)
 	    			{
 		    			lepeslabel.setText("No more possible steps! The pink player won!");
+		    			nyertes1 = 1;
 	    			}
 	    			else if(osszpiros == osszkek)
 	    			{
 		    			lepeslabel.setText("No more possible steps! DRAW!");
+		    			draw1 = 1; draw2 = 1;
 	    			}
 	    			else
 	    			{
 		    			lepeslabel.setText("No more possible steps! The blue player won!");
+		    			nyertes2 = 1;
 	    			}
 	    		
 	    		}
@@ -347,11 +353,14 @@ public class GameController
 	    		if (osszpiros == 10)
 	    		{
 	    			lepeslabel.setText("The pink player won!");
-	    		
+	    			nyertes1 = 1;
 	    		}
 	    		
 	    		if (osszkek == 10)
-	    		{lepeslabel.setText("The blue player won!");}
+	    		{
+	    			lepeslabel.setText("The blue player won!");
+	    			nyertes2 = 1;
+	    		}
 	    		if (lepeslabel.getText().equals("The blue player won!")  || lepeslabel.getText().equals("No more possible steps! The pink player won!") || lepeslabel.getText().equals("No more possible steps! DRAW!") || lepeslabel.getText().equals("The pink player won!") || lepeslabel.getText().equals("No more possible steps! The blue player won!"))
 	    		{
 	    			int x;
@@ -372,8 +381,21 @@ public class GameController
 	    		
 		   		String player1pontok = Integer.toString(osszkek); 
 	    		String player2pontok = Integer.toString(osszpiros);
+	    		String player1nyertes = Integer.toString(nyertes1);
+	    		String player2nyertes = Integer.toString(nyertes2);
+	    		String player1draw = Integer.toString(draw1);
+	    		String player2draw = Integer.toString(draw2);
+	    		
+	    		
 	            XmlProba.setpontok1(player1pontok);
 	            XmlProba.setpontok2(player2pontok);
+	            XmlProba.setnyertes1(player1nyertes);
+	            XmlProba.setnyertes2(player2nyertes);
+	            XmlProba.setdraw1(player1draw);
+	            XmlProba.setdraw2(player2draw);
+
+	            
+	            
 	            ReadXMLFile.setpontok1(player1pontok);
 	            ReadXMLFile.setpontok2(player2pontok);
 	            ReadXMLFile.main(null);

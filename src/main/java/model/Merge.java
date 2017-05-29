@@ -51,7 +51,7 @@ public class Merge {
 
 			Node nNode2 = nodes.item(j);
 			Element e2 = (Element) nNode2;
-			String asd2 = e2.getAttribute("name");
+	        String asd2 = e2.getAttribute("name");
 			System.out.println(asd);
 			System.out.println(asd2);
 			
@@ -59,7 +59,28 @@ public class Merge {
 			{
 				
 				System.out.println("______________takarmany");
-				elsonem = 1;break;
+				elsonem = 1;
+				String mehet = e2.getElementsByTagName("matcheswon").item(0).getTextContent();
+				String seged = e1.getElementsByTagName("matcheswon").item(0).getTextContent();
+				int mehetne = Integer.parseInt(seged) + Integer.parseInt(mehet);
+				mehet = Integer.toString(mehetne);
+				System.out.println(mehet);
+				e2.getElementsByTagName("matcheswon").item(0).setTextContent(mehet);
+				
+				mehet = e2.getElementsByTagName("matchesdraw").item(0).getTextContent();
+				seged = e1.getElementsByTagName("matchesdraw").item(0).getTextContent();
+				mehetne = Integer.parseInt(seged) + Integer.parseInt(mehet);
+				mehet = Integer.toString(mehetne);
+				e2.getElementsByTagName("matchesdraw").item(0).setTextContent(mehet);
+
+				mehet = e2.getElementsByTagName("points").item(0).getTextContent();
+				seged = e1.getElementsByTagName("points").item(0).getTextContent();
+				mehetne = Integer.parseInt(seged) + Integer.parseInt(mehet);
+				mehet = Integer.toString(mehetne);
+				e2.getElementsByTagName("points").item(0).setTextContent(mehet);
+
+				
+				break;
 			}
 			else 
 			{
@@ -85,7 +106,26 @@ public class Merge {
 			{
 				
 				System.out.println("______________takarmany");
-				masodiknem = 1;break;
+				masodiknem = 1;
+				String mehet = e2.getElementsByTagName("matcheswon").item(0).getTextContent();
+				String seged = e1.getElementsByTagName("matcheswon").item(0).getTextContent();
+				int mehetne = Integer.parseInt(seged) + Integer.parseInt(mehet);
+				mehet = Integer.toString(mehetne);
+				System.out.println(mehet);
+				e2.getElementsByTagName("matcheswon").item(0).setTextContent(mehet);
+				
+				mehet = e2.getElementsByTagName("matchesdraw").item(0).getTextContent();
+				seged = e1.getElementsByTagName("matchesdraw").item(0).getTextContent();
+				mehetne = Integer.parseInt(seged) + Integer.parseInt(mehet);
+				mehet = Integer.toString(mehetne);
+				e2.getElementsByTagName("matchesdraw").item(0).setTextContent(mehet);
+
+				mehet = e2.getElementsByTagName("points").item(0).getTextContent();
+				seged = e1.getElementsByTagName("points").item(0).getTextContent();
+				mehetne = Integer.parseInt(seged) + Integer.parseInt(mehet);
+				mehet = Integer.toString(mehetne);
+				e2.getElementsByTagName("points").item(0).setTextContent(mehet);	
+				break;
 			}
 			else 
 			{

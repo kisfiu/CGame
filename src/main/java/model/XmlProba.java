@@ -26,13 +26,20 @@ public class XmlProba {
     /**
      * @param args the command line arguments
      */
-	static String asd;static String asd1;static String asd2;static String pontos1;static String pontos2;
+	static String asd;static String asd1 = "0";static String asd2 = "0";static String pontos1 = "0";static String pontos2 = "0";
+	static String nyertes1 = "0"; static String nyertes2 = "0"; static String draw1 = "0"; static String draw2 = "0";
 	
 	public static void settName1(String playeronetext)     {asd1 = playeronetext;}
 	public static void settName2(String playertwotext)     {asd2 = playertwotext;}
 	public static void setpontok1(String player1pontok)     {pontos1 = player1pontok;}
 	public static void setpontok2(String player2pontok)     {pontos2 = player2pontok;}
+	public static void setnyertes1(String player1nyertes)     {nyertes1 = player1nyertes;}
+	public static void setnyertes2(String player2nyertes)     {nyertes2 = player2nyertes;}
+	public static void setdraw1(String player1draw)     {draw1 = player1draw;}
+	public static void setdraw2(String player2draw)     {draw2 = player2draw;}
 
+
+	
 	
 	public static void main(String[] args) throws TransformerException, ParserConfigurationException 
     {
@@ -56,18 +63,51 @@ public class XmlProba {
         player.appendChild(matchesplayed);
 
         Element matcheswon = doc.createElement("matcheswon");
-        matcheswon.setTextContent("4");
+//        String ennyinyertes1 = matcheswon.getTextContent();
+//        int nyertespontok1 = (Integer.parseInt(nyertes1));
+//        String pontokk2 = Integer.toString(pontok2);
+        matcheswon.setTextContent(nyertes2);
+
+        
         player.appendChild(matcheswon);
         
         Element matchesdraw = doc.createElement("matchesdraw");
-        matchesdraw.setTextContent("0");
+        matchesdraw.setTextContent(draw1);
         player.appendChild(matchesdraw);
         
         Element points = doc.createElement("points");
-        int pontok1 = (Integer.parseInt(matcheswon.getTextContent()) * 5 + Integer.parseInt(matcheswon.getTextContent()) * 3);
+//        points.setTextContent(pontos1);
+     
+        int pontok1;
+        System.out.println(matcheswon.getTextContent()); 
+        if(Integer.parseInt(matcheswon.getTextContent()) != 0 || Integer.parseInt(matchesdraw.getTextContent()) != 0)
+        {
+           pontok1 = (Integer.parseInt(matcheswon.getTextContent()) * 5 + Integer.parseInt(matchesdraw.getTextContent()) * 3);
+        }
+        else 
+        {
+        	pontok1=0;
+        }
+        
+//        int pontok2 = (Integer.parseInt(matcheswon2.getTextContent()) * 5 + Integer.parseInt(matchesdraw2.getTextContent()) * 3);
+        int ennyi1 = Integer.parseInt(pontos1);
+        pontok1 = pontok1 + ennyi1;
         String pontokk1 = Integer.toString(pontok1);
-        points.setTextContent(pontos1);
+        points.setTextContent(pontokk1);
+        
         player.appendChild(points);
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         Element player2 = doc.createElement("player");
@@ -79,18 +119,32 @@ public class XmlProba {
         player2.appendChild(matchesplayed2);
 
         Element matcheswon2 = doc.createElement("matcheswon");
-        matcheswon2.setTextContent("4");
+        matcheswon2.setTextContent(nyertes1);
         player2.appendChild(matcheswon2);
         
         Element matchesdraw2 = doc.createElement("matchesdraw");
-        matchesdraw2.setTextContent("4");
+        matchesdraw2.setTextContent(draw2);
         player2.appendChild(matchesdraw2);
         
         Element points2 = doc.createElement("points");
-        int pontok2 = (Integer.parseInt(matcheswon2.getTextContent()) * 5 + Integer.parseInt(matcheswon2.getTextContent()) * 3);
-        String pontokk2 = Integer.toString(pontok2);
-        points2.setTextContent(pontos2);
         player2.appendChild(points2);
+        
+        int pontok2;
+        System.out.println(matcheswon2.getTextContent()); 
+        if(Integer.parseInt(matcheswon2.getTextContent()) != 0 || Integer.parseInt(matchesdraw2.getTextContent()) != 0)
+        {
+           pontok2 = (Integer.parseInt(matcheswon2.getTextContent()) * 5 + Integer.parseInt(matchesdraw2.getTextContent()) * 3);
+        }
+        else 
+        {
+        	pontok2=0;
+        }
+        
+//        int pontok2 = (Integer.parseInt(matcheswon2.getTextContent()) * 5 + Integer.parseInt(matchesdraw2.getTextContent()) * 3);
+        int ennyi2 = Integer.parseInt(pontos2);
+        pontok2 = pontok2 + ennyi2;
+        String pontokk2 = Integer.toString(pontok2);
+        points2.setTextContent(pontokk2);
 
         
         
@@ -98,7 +152,10 @@ public class XmlProba {
         System.out.println(asd2);
         System.out.println(pontos1);
         System.out.println(pontos2);
-
+        System.out.println(nyertes1);
+        System.out.println(nyertes2);
+        System.out.println(matcheswon.getTextContent());
+ 
         
 
         TransformerFactory tFactory = TransformerFactory.newInstance();
