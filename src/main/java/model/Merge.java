@@ -27,7 +27,16 @@ import javafx.scene.text.Text;
 
 public class Merge {
 	
-	public static void main(String[] args) throws TransformerException, ParserConfigurationException, IOException, SAXException 
+	
+	
+	
+	public int visszad(int n) 
+	{
+		int kutya = 0;
+		return kutya;
+	}
+	
+	public static void szamolj() throws TransformerException, ParserConfigurationException, IOException, SAXException 
     {
 	DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();   
 	domFactory.setIgnoringComments(true);  
@@ -81,6 +90,17 @@ public class Merge {
 			frommerged = Emerged.getElementsByTagName("points").item(0).getTextContent();
 			fromoutput = Eoutput1.getElementsByTagName("points").item(0).getTextContent();
 			Itogether = Integer.parseInt(fromoutput) + Integer.parseInt(frommerged);
+				String meccsek = Emerged.getElementsByTagName("matchesplayed").item(0).getTextContent();
+				String nyeresek = Emerged.getElementsByTagName("matcheswon").item(0).getTextContent();
+				String dontetlenek = Emerged.getElementsByTagName("matchesdraw").item(0).getTextContent();
+				if (meccsek.equalsIgnoreCase("3") || meccsek.equalsIgnoreCase("5") || meccsek.equalsIgnoreCase("15") || meccsek.equalsIgnoreCase("50") 
+						||
+					nyeresek.equals("5") || nyeresek.equals("10") || nyeresek.equals("15") || nyeresek.equals("20")
+						||
+					dontetlenek.equals("1") || dontetlenek.equals("7") || dontetlenek.equals("11") || dontetlenek.equals("30"))
+				{
+					Itogether += 7;
+				}
 			Stogether = Integer.toString(Itogether);
 			Emerged.getElementsByTagName("points").item(0).setTextContent(Stogether);		
 			break;
@@ -128,6 +148,17 @@ public class Merge {
 			frommerged = Emerged.getElementsByTagName("points").item(0).getTextContent();
 			fromoutput = Eoutput2.getElementsByTagName("points").item(0).getTextContent();
 			Itogether = Integer.parseInt(fromoutput) + Integer.parseInt(frommerged);
+				String meccsek = Emerged.getElementsByTagName("matchesplayed").item(0).getTextContent();
+				String nyeresek = Emerged.getElementsByTagName("matcheswon").item(0).getTextContent();
+				String dontetlenek = Emerged.getElementsByTagName("matchesdraw").item(0).getTextContent();
+				if (meccsek.equalsIgnoreCase("3") || meccsek.equalsIgnoreCase("5") || meccsek.equalsIgnoreCase("15") || meccsek.equalsIgnoreCase("50") 
+						||
+					nyeresek.equals("5") || nyeresek.equals("10") || nyeresek.equals("15") || nyeresek.equals("20")
+						||
+					dontetlenek.equals("1") || dontetlenek.equals("7") || dontetlenek.equals("11") || dontetlenek.equals("30"))
+				{
+					Itogether += 7;
+				}
 			Stogether = Integer.toString(Itogether);
 			Emerged.getElementsByTagName("points").item(0).setTextContent(Stogether);		
 			break;
@@ -170,5 +201,28 @@ public class Merge {
 	output.write(xmlOutput);
 	output.close();
 	System.out.println("merge complete");
-}
+    }
+	
+	
+
+
+//	String probalunk = Emerged.getElementsByTagName("matchesplayed").item(0).getTextContent();
+//	if (probalunk.equalsIgnoreCase("3"))
+//	{
+//		Itogether += 7;
+//	}
+//
+// 
+//	public String hajatszott(String n)
+//	{
+//		Node Nmerged = nodes.item(j);
+//		Element Emerged = (Element) Nmerged;
+//		String probalunk = Emerged.getElementsByTagName("matchesplayed").item(0).getTextContent();
+//		String asd = "0";
+//		return asd; 
+//	}
+
+
+
+
 }

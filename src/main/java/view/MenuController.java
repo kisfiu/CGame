@@ -11,6 +11,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+
+import org.xml.sax.SAXException;
+
 import controller.MainApp;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -35,8 +40,10 @@ public class MenuController
 	@FXML
 	private Button toplistbutton;
 	@FXML
-	private void handletoplistbutton(ActionEvent event) throws IOException 
+	private void handletoplistbutton(ActionEvent event) throws IOException, TransformerException, ParserConfigurationException, SAXException 
 	{		
+		
+//    	SetToplist.main(null);
 		Node node=(Node) event.getSource();
 		Stage stage=(Stage) node.getScene().getWindow();
 		Parent root = FXMLLoader.load(getClass().getResource("/view/Toplist.fxml"));

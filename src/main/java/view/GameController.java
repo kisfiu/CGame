@@ -409,7 +409,7 @@ public class GameController
 					e1.printStackTrace();
 				}
 	    		
-	            Merge.main(null);
+	            Merge.szamolj();
 	            
 	    		}
 	    		
