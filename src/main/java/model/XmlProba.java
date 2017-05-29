@@ -28,6 +28,7 @@ public class XmlProba {
      */
 	static String asd;static String asd1 = "0";static String asd2 = "0";static String pontos1 = "0";static String pontos2 = "0";
 	static String nyertes1 = "0"; static String nyertes2 = "0"; static String draw1 = "0"; static String draw2 = "0";
+	static String jatszott1 = "1"; static String jatszott2 = "1";
 	
 	public static void settName1(String playeronetext)     {asd1 = playeronetext;}
 	public static void settName2(String playertwotext)     {asd2 = playertwotext;}
@@ -59,30 +60,30 @@ public class XmlProba {
 
         
         Element matchesplayed = doc.createElement("matchesplayed");
-        matchesplayed.setTextContent("8");
+        matchesplayed.setTextContent(jatszott1);
         player.appendChild(matchesplayed);
 
-        Element matcheswon = doc.createElement("matcheswon");
+        Element matcheswon1 = doc.createElement("matcheswon");
 //        String ennyinyertes1 = matcheswon.getTextContent();
 //        int nyertespontok1 = (Integer.parseInt(nyertes1));
 //        String pontokk2 = Integer.toString(pontok2);
-        matcheswon.setTextContent(nyertes2);
+        matcheswon1.setTextContent(nyertes2);
 
         
-        player.appendChild(matcheswon);
+        player.appendChild(matcheswon1);
         
-        Element matchesdraw = doc.createElement("matchesdraw");
-        matchesdraw.setTextContent(draw1);
-        player.appendChild(matchesdraw);
+        Element matchesdraw1 = doc.createElement("matchesdraw");
+        matchesdraw1.setTextContent(draw1);
+        player.appendChild(matchesdraw1);
         
         Element points = doc.createElement("points");
 //        points.setTextContent(pontos1);
      
         int pontok1;
-        System.out.println(matcheswon.getTextContent()); 
-        if(Integer.parseInt(matcheswon.getTextContent()) != 0 || Integer.parseInt(matchesdraw.getTextContent()) != 0)
+        System.out.println(matcheswon1.getTextContent()); 
+        if(Integer.parseInt(matcheswon1.getTextContent()) != 0 || Integer.parseInt(matchesdraw1.getTextContent()) != 0)
         {
-           pontok1 = (Integer.parseInt(matcheswon.getTextContent()) * 5 + Integer.parseInt(matchesdraw.getTextContent()) * 3);
+           pontok1 = (Integer.parseInt(matcheswon1.getTextContent()) * 5 + Integer.parseInt(matchesdraw1.getTextContent()) * 3);
         }
         else 
         {
@@ -115,7 +116,7 @@ public class XmlProba {
         players.appendChild(player2);
 
         Element matchesplayed2 = doc.createElement("matchesplayed");
-        matchesplayed2.setTextContent("4");
+        matchesplayed2.setTextContent(jatszott2);
         player2.appendChild(matchesplayed2);
 
         Element matcheswon2 = doc.createElement("matcheswon");
@@ -154,7 +155,7 @@ public class XmlProba {
         System.out.println(pontos2);
         System.out.println(nyertes1);
         System.out.println(nyertes2);
-        System.out.println(matcheswon.getTextContent());
+        System.out.println(matcheswon1.getTextContent());
  
         
 

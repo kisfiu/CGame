@@ -330,7 +330,7 @@ public class GameController
 	    	 
 	    		if (zold == 0 && piros == 0 && kek == 0)
 	    		{ 
-	    			if(piros < kek)
+	    			if(osszpiros > osszkek)
 	    			{
 		    			lepeslabel.setText("No more possible steps! The pink player won!");
 		    			nyertes1 = 1;

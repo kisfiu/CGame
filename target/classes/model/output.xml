@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <players>
-  <player name="0">
-    <matchesplayed>8</matchesplayed>
+  <player name="sanyi1">
+    <matchesplayed>1</matchesplayed>
     <matcheswon>0</matcheswon>
-    <matchesdraw>0</matchesdraw>
-    <points>0</points>
+    <matchesdraw>1</matchesdraw>
+    <points>7</points>
   </player>
-  <player name="0">
-    <matchesplayed>4</matchesplayed>
+  <player name="sanyi2">
+    <matchesplayed>1</matchesplayed>
     <matcheswon>0</matcheswon>
-    <matchesdraw>0</matchesdraw>
-    <points>0</points>
+    <matchesdraw>1</matchesdraw>
+    <points>7</points>
   </player>
 </players>

@@ -8,14 +8,92 @@
 	</player>
 	<player name="gabi">
 		<matchesplayed>0</matchesplayed>
-		<matcheswon>3</matcheswon>
+		<matcheswon>16</matcheswon>
 		<matchesdraw>0</matchesdraw>
-		<points>29</points>
+		<points>195</points>
 	</player>
 	<player name="tilda">
 		<matchesplayed>0</matchesplayed>
-		<matcheswon>3</matcheswon>
+		<matcheswon>15</matcheswon>
 		<matchesdraw>0</matchesdraw>
-		<points>29</points>
+		<points>189</points>
 	</player>
+<player name=" tilda">
+    <matchesplayed>0</matchesplayed>
+    <matcheswon>0</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>5</points>
+  </player>
+<player name="0">
+    <matchesplayed>2</matchesplayed>
+    <matcheswon>0</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>0</points>
+  </player>
+<player name="0">
+    <matchesplayed>0</matchesplayed>
+    <matcheswon>0</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>0</points>
+  </player>
+<player name="sanyi a ló">
+    <matchesplayed>0</matchesplayed>
+    <matcheswon>1</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>16</points>
+  </player>
+<player name="tibi a kacsa">
+    <matchesplayed>0</matchesplayed>
+    <matcheswon>0</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>8</points>
+  </player>
+<player name="proba1">
+    <matchesplayed>0</matchesplayed>
+    <matcheswon>1</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>20</points>
+  </player>
+<player name="proba2">
+    <matchesplayed>0</matchesplayed>
+    <matcheswon>0</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>8</points>
+  </player>
+<player name="lajos1">
+    <matchesplayed>0</matchesplayed>
+    <matcheswon>6</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>77</points>
+  </player>
+<player name="lajos2">
+    <matchesplayed>0</matchesplayed>
+    <matcheswon>1</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>21</points>
+  </player>
+<player name="timike1">
+    <matchesplayed>0</matchesplayed>
+    <matcheswon>1</matcheswon>
+    <matchesdraw>1</matchesdraw>
+    <points>30</points>
+  </player>
+<player name="timike2">
+    <matchesplayed>0</matchesplayed>
+    <matcheswon>3</matcheswon>
+    <matchesdraw>1</matchesdraw>
+    <points>45</points>
+  </player>
+<player name="sanyi1">
+    <matchesplayed>2</matchesplayed>
+    <matcheswon>0</matcheswon>
+    <matchesdraw>1</matchesdraw>
+    <points>11</points>
+  </player>
+<player name="sanyi2">
+    <matchesplayed>2</matchesplayed>
+    <matcheswon>2</matcheswon>
+    <matchesdraw>1</matchesdraw>
+    <points>27</points>
+  </player>
 </players>

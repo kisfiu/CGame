@@ -43,95 +43,102 @@ public class Merge {
 	int elsonem = 0;
 	int masodiknem = 0;
 		
-		Node nNode = nodes1.item(0);
-		Element e1 = (Element) nNode;
-		String asd = e1.getAttribute("name");
-		for(int j=0; j<nodes.getLength(); j=j+1)
+	
+
+	Node Noutput1 = nodes1.item(0);
+	Element Eoutput1 = (Element) Noutput1;
+	String nevoutput1 = Eoutput1.getAttribute("name");
+	for(int j=0; j<nodes.getLength(); j=j+1)
+	{
+		Node Nmerged = nodes.item(j);
+		Element Emerged = (Element) Nmerged;
+        String nevmerged = Emerged.getAttribute("name");
+		System.out.println(nevoutput1);
+		System.out.println(nevmerged);
+		
+		if(nevoutput1.equals(nevmerged))
 		{
-
-			Node nNode2 = nodes.item(j);
-			Element e2 = (Element) nNode2;
-	        String asd2 = e2.getAttribute("name");
-			System.out.println(asd);
-			System.out.println(asd2);
+			System.out.println("______________takarmany");
+			elsonem = 1;
+			String frommerged = Emerged.getElementsByTagName("matcheswon").item(0).getTextContent();
+			String fromoutput = Eoutput1.getElementsByTagName("matcheswon").item(0).getTextContent();
+			int Itogether = Integer.parseInt(fromoutput) + Integer.parseInt(frommerged);
+			String Stogether = Integer.toString(Itogether);
+			System.out.println(Stogether);
+			Emerged.getElementsByTagName("matcheswon").item(0).setTextContent(Stogether);
 			
-			if(asd.equals(asd2))
-			{
-				
-				System.out.println("______________takarmany");
-				elsonem = 1;
-				String mehet = e2.getElementsByTagName("matcheswon").item(0).getTextContent();
-				String seged = e1.getElementsByTagName("matcheswon").item(0).getTextContent();
-				int mehetne = Integer.parseInt(seged) + Integer.parseInt(mehet);
-				mehet = Integer.toString(mehetne);
-				System.out.println(mehet);
-				e2.getElementsByTagName("matcheswon").item(0).setTextContent(mehet);
-				
-				mehet = e2.getElementsByTagName("matchesdraw").item(0).getTextContent();
-				seged = e1.getElementsByTagName("matchesdraw").item(0).getTextContent();
-				mehetne = Integer.parseInt(seged) + Integer.parseInt(mehet);
-				mehet = Integer.toString(mehetne);
-				e2.getElementsByTagName("matchesdraw").item(0).setTextContent(mehet);
+			frommerged = Emerged.getElementsByTagName("matchesplayed").item(0).getTextContent();
+			Itogether = Integer.parseInt(frommerged); Itogether += 1;  
+			Stogether = Integer.toString(Itogether);
+			Emerged.getElementsByTagName("matchesplayed").item(0).setTextContent(Stogether);
+			
+			frommerged = Emerged.getElementsByTagName("matchesdraw").item(0).getTextContent();
+			fromoutput = Eoutput1.getElementsByTagName("matchesdraw").item(0).getTextContent();
+			Itogether = Integer.parseInt(fromoutput) + Integer.parseInt(frommerged);
+			Stogether = Integer.toString(Itogether);
+			Emerged.getElementsByTagName("matchesdraw").item(0).setTextContent(Stogether);
 
-				mehet = e2.getElementsByTagName("points").item(0).getTextContent();
-				seged = e1.getElementsByTagName("points").item(0).getTextContent();
-				mehetne = Integer.parseInt(seged) + Integer.parseInt(mehet);
-				mehet = Integer.toString(mehetne);
-				e2.getElementsByTagName("points").item(0).setTextContent(mehet);
-
-				
-				break;
-			}
+			frommerged = Emerged.getElementsByTagName("points").item(0).getTextContent();
+			fromoutput = Eoutput1.getElementsByTagName("points").item(0).getTextContent();
+			Itogether = Integer.parseInt(fromoutput) + Integer.parseInt(frommerged);
+			Stogether = Integer.toString(Itogether);
+			Emerged.getElementsByTagName("points").item(0).setTextContent(Stogether);		
+			break;
+		}
 			else 
 			{
 				System.out.println("--------------------megvagy");
 			}
-		}
+	}
 		 
+
+	Node Noutput2 = nodes1.item(1);
+	Element Eoutput2 = (Element) Noutput2;
+	String nevoutput2 = Eoutput2.getAttribute("name");
+	for(int j=0; j<nodes.getLength(); j=j+1)
+	{
+		Node Nmerged = nodes.item(j);
+		Element Emerged = (Element) Nmerged;
+        String nevmerged = Emerged.getAttribute("name");
+		System.out.println(nevoutput2);
+		System.out.println(nevmerged);
 		
-		
-		Node nNodeuj = nodes1.item(1);
-		Element e1uj = (Element) nNodeuj;
-		String asduj = e1uj.getAttribute("name");		
-		for(int j=0; j<nodes.getLength(); j=j+1)
+		if(nevoutput2.equals(nevmerged))
 		{
-
-			Node nNode2 = nodes.item(j);
-			Element e2 = (Element) nNode2;
-			String asd2 = e2.getAttribute("name");
-			System.out.println(asduj);
-			System.out.println(asd2);
+			System.out.println("______________takarmany");
+			masodiknem = 1;
+			String frommerged = Emerged.getElementsByTagName("matcheswon").item(0).getTextContent();
+			String fromoutput = Eoutput2.getElementsByTagName("matcheswon").item(0).getTextContent();
+			int Itogether = Integer.parseInt(fromoutput) + Integer.parseInt(frommerged);
+			String Stogether = Integer.toString(Itogether);
+			System.out.println(Stogether);
+			Emerged.getElementsByTagName("matcheswon").item(0).setTextContent(Stogether);
 			
-			if(asduj.equals(asd2))
-			{
-				
-				System.out.println("______________takarmany");
-				masodiknem = 1;
-				String mehet = e2.getElementsByTagName("matcheswon").item(0).getTextContent();
-				String seged = e1.getElementsByTagName("matcheswon").item(0).getTextContent();
-				int mehetne = Integer.parseInt(seged) + Integer.parseInt(mehet);
-				mehet = Integer.toString(mehetne);
-				System.out.println(mehet);
-				e2.getElementsByTagName("matcheswon").item(0).setTextContent(mehet);
-				
-				mehet = e2.getElementsByTagName("matchesdraw").item(0).getTextContent();
-				seged = e1.getElementsByTagName("matchesdraw").item(0).getTextContent();
-				mehetne = Integer.parseInt(seged) + Integer.parseInt(mehet);
-				mehet = Integer.toString(mehetne);
-				e2.getElementsByTagName("matchesdraw").item(0).setTextContent(mehet);
+			frommerged = Emerged.getElementsByTagName("matchesplayed").item(0).getTextContent();
+			Itogether = Integer.parseInt(frommerged); Itogether += 1;  
+			Stogether = Integer.toString(Itogether);
+			Emerged.getElementsByTagName("matchesplayed").item(0).setTextContent(Stogether);
+			
+			frommerged = Emerged.getElementsByTagName("matchesdraw").item(0).getTextContent();
+			fromoutput = Eoutput2.getElementsByTagName("matchesdraw").item(0).getTextContent();
+			Itogether = Integer.parseInt(fromoutput) + Integer.parseInt(frommerged);
+			Stogether = Integer.toString(Itogether);
+			Emerged.getElementsByTagName("matchesdraw").item(0).setTextContent(Stogether);
 
-				mehet = e2.getElementsByTagName("points").item(0).getTextContent();
-				seged = e1.getElementsByTagName("points").item(0).getTextContent();
-				mehetne = Integer.parseInt(seged) + Integer.parseInt(mehet);
-				mehet = Integer.toString(mehetne);
-				e2.getElementsByTagName("points").item(0).setTextContent(mehet);	
-				break;
-			}
+			frommerged = Emerged.getElementsByTagName("points").item(0).getTextContent();
+			fromoutput = Eoutput2.getElementsByTagName("points").item(0).getTextContent();
+			Itogether = Integer.parseInt(fromoutput) + Integer.parseInt(frommerged);
+			Stogether = Integer.toString(Itogether);
+			Emerged.getElementsByTagName("points").item(0).setTextContent(Stogether);		
+			break;
+		}
 			else 
 			{
 				System.out.println("--------------------megvagy");
 			}
-		}
+	}
+		
+		
 		
 		if(elsonem == 0)
 		{
