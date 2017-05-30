@@ -6,6 +6,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -16,19 +18,17 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import javafx.scene.text.Text;
-
 public class Merge {
 	
 	
-	public static void szamolj() throws TransformerException, ParserConfigurationException, IOException, SAXException 
+	public static Map<Integer, Map> szamolj() throws TransformerException, ParserConfigurationException, IOException, SAXException 
     {
 //	ClassLoader classloader = getClass().getClassLoader();
 	DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();   
@@ -45,18 +45,22 @@ public class Merge {
 	int elsonem = 0;
 	int masodiknem = 0;
 		
-	
+	Map<Integer,Map> scores = new HashMap<>();
 
 	Node Noutput1 = nodes1.item(0);
 	Element Eoutput1 = (Element) Noutput1;
 	String nevoutput1 = Eoutput1.getAttribute("name");
 	for(int j=0; j<nodes.getLength(); j=j+1)
 	{
+		Map<String, String> player = new HashMap<>();
+		
 		Node Nmerged = nodes.item(j);
 		Element Emerged = (Element) Nmerged;
         String nevmerged = Emerged.getAttribute("name");
 		System.out.println(nevoutput1);
 		System.out.println(nevmerged);
+		
+		player.put("name", nevmerged);
 		
 		if(nevoutput1.equals(nevmerged))
 		{
@@ -68,17 +72,20 @@ public class Merge {
 			String Stogether = Integer.toString(Itogether);
 			System.out.println(Stogether);
 			Emerged.getElementsByTagName("matcheswon").item(0).setTextContent(Stogether);
+			player.put("matcheswon", Stogether);
 			
 			frommerged = Emerged.getElementsByTagName("matchesplayed").item(0).getTextContent();
 			Itogether = Integer.parseInt(frommerged); Itogether += 1;  
 			Stogether = Integer.toString(Itogether);
 			Emerged.getElementsByTagName("matchesplayed").item(0).setTextContent(Stogether);
+			player.put("matchesplayed", Stogether);
 			
 			frommerged = Emerged.getElementsByTagName("matchesdraw").item(0).getTextContent();
 			fromoutput = Eoutput1.getElementsByTagName("matchesdraw").item(0).getTextContent();
 			Itogether = Integer.parseInt(fromoutput) + Integer.parseInt(frommerged);
 			Stogether = Integer.toString(Itogether);
 			Emerged.getElementsByTagName("matchesdraw").item(0).setTextContent(Stogether);
+			player.put("matchesdraw", Stogether);
 
 			frommerged = Emerged.getElementsByTagName("points").item(0).getTextContent();
 			fromoutput = Eoutput1.getElementsByTagName("points").item(0).getTextContent();
@@ -96,12 +103,14 @@ public class Merge {
 				}
 			Stogether = Integer.toString(Itogether);
 			Emerged.getElementsByTagName("points").item(0).setTextContent(Stogether);		
+			player.put("points", Stogether);
 			break;
 		}
 			else 
 			{
 				System.out.println("--------------------megvagy");
 			}
+		scores.put(j, player);
 	}
 		 
 
@@ -192,6 +201,9 @@ public class Merge {
 	output.write(xmlOutput);
 	output.close();
 	System.out.println("merge complete");
+	
+	
+	return scores;
     }
 	
 	
