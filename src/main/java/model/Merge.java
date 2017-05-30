@@ -28,16 +28,9 @@ import javafx.scene.text.Text;
 public class Merge {
 	
 	
-	
-	
-	public int visszad(int n) 
-	{
-		int kutya = 0;
-		return kutya;
-	}
-	
 	public static void szamolj() throws TransformerException, ParserConfigurationException, IOException, SAXException 
     {
+//	ClassLoader classloader = getClass().getClassLoader();
 	DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();   
 	domFactory.setIgnoringComments(true);  
 	DocumentBuilder builder = domFactory.newDocumentBuilder();   
@@ -185,8 +178,6 @@ public class Merge {
 		System.out.println(elsonem);
 		System.out.println(masodiknem);			
 		
-//		Node n= (Node) doc.importNode(nodes1.item(i), true);  
-//		nodes.item(i).getParentNode().appendChild(n);
 
 	Transformer transformer = TransformerFactory.newInstance().newTransformer();  
 	transformer.setOutputProperty(OutputKeys.INDENT, "yes");  
@@ -205,6 +196,12 @@ public class Merge {
 	
 	
 
+	
+	
+	
+	
+	
+	
 
 //	String probalunk = Emerged.getElementsByTagName("matchesplayed").item(0).getTextContent();
 //	if (probalunk.equalsIgnoreCase("3"))

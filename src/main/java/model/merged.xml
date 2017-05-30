@@ -72,4 +72,40 @@
     <matchesdraw>0</matchesdraw>
     <points>7</points>
   </player>
+<player name="Peti">
+    <matchesplayed>1</matchesplayed>
+    <matcheswon>1</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>10</points>
+  </player>
+<player name="Benyus">
+    <matchesplayed>1</matchesplayed>
+    <matcheswon>0</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>1</points>
+  </player>
+<player name="test1">
+    <matchesplayed>1</matchesplayed>
+    <matcheswon>1</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>7</points>
+  </player>
+<player name="test2">
+    <matchesplayed>1</matchesplayed>
+    <matcheswon>0</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>1</points>
+  </player>
+<player name="ubul">
+    <matchesplayed>1</matchesplayed>
+    <matcheswon>1</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>9</points>
+  </player>
+<player name="ubul3">
+    <matchesplayed>1</matchesplayed>
+    <matcheswon>0</matcheswon>
+    <matchesdraw>0</matchesdraw>
+    <points>1</points>
+  </player>
 </players>

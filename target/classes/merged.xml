@@ -96,16 +96,4 @@
     <matchesdraw>0</matchesdraw>
     <points>1</points>
   </player>
-<player name="ubul">
-    <matchesplayed>1</matchesplayed>
-    <matcheswon>1</matcheswon>
-    <matchesdraw>0</matchesdraw>
-    <points>9</points>
-  </player>
-<player name="ubul3">
-    <matchesplayed>1</matchesplayed>
-    <matcheswon>0</matcheswon>
-    <matchesdraw>0</matchesdraw>
-    <points>1</points>
-  </player>
 </players>
